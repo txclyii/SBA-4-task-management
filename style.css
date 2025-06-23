@@ -1,0 +1,88 @@
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --floral-white: #fffbf2;
+  --rose-pink: #ffe7e7;
+  --lavender: #ddd7es;
+  --light-blue: #b9cbe1;
+  --medium-blue: #adb8d6;
+  
+  --patrick-font: "Patrick Hand", sans serif;
+}
+
+body {
+  background-color: var(--floral-white);
+  font-family: var(--patrick-font);
+  letter-spacing: 5px;
+}
+
+#wholeContainer {
+  width: 50%;
+  height: 500px;
+  background-color: white;
+  padding: 20px;
+  border: 5px solid var(--rose-pink);
+  justify-self: center;
+  margin-top: 20vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+form {
+  text-align: center;
+}
+
+input, select {
+  font-family: var(--patrick-font);
+  font-size: 1rem;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+#taskName {
+  width: 30%;
+}
+
+#submit {
+  border: 0px solid transparent;
+  cursor: pointer;
+}
+
+#taskCategory, #deadline, #status {
+  width: 15%;
+  cursor: pointer;
+}
+
+#taskList {
+  padding-left: 50px;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+#taskList li::before {
+  content: "";
+  display: inline-block;
+  background-image: url("https://64.media.tumblr.com/e3233cd6aa2a7fa5026bed00f13e83c2/663776c637eb8705-3c/s1280x1920/2955372f9e197be448a504ec5c9bc819fccdd29d.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#taskList li:hover {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
