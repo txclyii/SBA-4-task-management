@@ -1,88 +1,102 @@
-.patrick-hand-regular {
-  font-family: "Patrick Hand", cursive;
+.chewy-regular {
+  font-family: "Chewy", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
-:root {
-  --floral-white: #fffbf2;
-  --rose-pink: #ffe7e7;
-  --lavender: #ddd7es;
-  --light-blue: #b9cbe1;
-  --medium-blue: #adb8d6;
-  
-  --patrick-font: "Patrick Hand", sans serif;
-}
-
 body {
-  background-color: var(--floral-white);
-  font-family: var(--patrick-font);
-  letter-spacing: 5px;
-}
-
-#wholeContainer {
-  width: 50%;
-  height: 500px;
-  background-color: white;
+  font-family: Arial, sans-serif;
+  background-image: url("https://wallpapersok.com/images/high/2d-farm-of-stardew-valley-zjvtjx1huj3uhdbi.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 20px;
-  border: 5px solid var(--rose-pink);
-  justify-self: center;
-  margin-top: 20vh;
+  font-family: "Chewy";
+  letter-spacing: 1px;
 }
 
 h1 {
   text-align: center;
-  font-size: 4rem;
+  color: white;
+  text-shadow: 3px 3px 0px #914e38;
+  font-size: 40px;
 }
 
-form {
-  text-align: center;
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 820px 450px;
 }
 
-input, select {
-  font-family: var(--patrick-font);
-  font-size: 1rem;
-  border-top: 0px;
-  border-right: 0px;
-  border-left: 0px;
+.task-form,
+.filters {
+  max-width: 600px;
+  margin: 20px auto;
+  background: rgb(253, 245, 238);
+  padding: 15px;
+  border-radius: 20px;
+  border: 5px solid #914e38;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
   border-bottom: 1px solid black;
-  padding: 5px;
+  font-family: "Chewy";
+  color: #5a3e34;
+  letter-spacing: 1px;
 }
 
-#taskName {
-  width: 30%;
-}
-
-#submit {
-  border: 0px solid transparent;
+button {
+  background-color: rgb(228, 179, 124);
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  border: 0;
   cursor: pointer;
+  transition: color 0.5s ease-in;
+  border-radius: 10px;
+  font-family: "Chewy";
+  color: #5a3e34;
+  letter-spacing: 1px;
 }
 
-#taskCategory, #deadline, #status {
-  width: 15%;
-  cursor: pointer;
+button:hover {
+    background-color: rgb(187, 141, 88);
 }
 
 #taskList {
-  padding-left: 50px;
+  max-width: 1100px;
+  margin: 20px auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: rgb(253, 245, 238);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 5px solid #914e38;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   letter-spacing: 1px;
-  font-size: 1.2rem;
-  list-style: none;
 }
 
-#taskList li::before {
-  content: "";
-  display: inline-block;
-  background-image: url("https://64.media.tumblr.com/e3233cd6aa2a7fa5026bed00f13e83c2/663776c637eb8705-3c/s1280x1920/2955372f9e197be448a504ec5c9bc819fccdd29d.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  vertical-align: middle;
+.task-info {
+  flex: 1 1 70%;
 }
 
-#taskList li:hover {
-    opacity: 0.5;
-    text-decoration: line-through;
+.task-controls {
+  flex: 1 1 30%;
 }
